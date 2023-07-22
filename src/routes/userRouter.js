@@ -51,7 +51,7 @@ passport.use(
     {
       clientID: clientID,
       clientSecret: clientSecret,
-      callbackURL: callbackURL,
+      // callbackURL: callbackURL,
       tenant: tenantID,
       resource: "https://graph.microsoft.com/",
     },
