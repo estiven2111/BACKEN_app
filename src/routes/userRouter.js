@@ -87,15 +87,11 @@ userRouter.get(
   }),
   (req, res) => {
     console.log("callbackkkkk");
-    const datos = {pass:"pass",token:req.user.accessToken}
+    // const datos = {pass:"pass",token:req.user.accessToken}
     // res.redirect("/user/api/pruebas");
-    res.json(datos)
+    res.json("ok")
   }
 );
-userRouter.get("/api/pruebas",(req,res)=>{
-  const datos = {pass:"pass",token:req.user.accessToken}
-  res.json(datos)
-})
 // userRouter.post("/api/dashboard",ensureAuthenticated,dashboard);
 userRouter.post("/api/dashboard", dashboard);
 // ensureAuthenticated
