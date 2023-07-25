@@ -76,7 +76,7 @@ const dashboard = async (req, res) => {
         console.error(err);
         return;
       }
-      // console.log(req.user.accessToken)
+     console.log("token usuario",req.user.accessToken)
       request.put(
         {
           url: `https://graph.microsoft.com/v1.0/drive/root:/${onedrive_folder}/${onedrive_filename}:/content`,
