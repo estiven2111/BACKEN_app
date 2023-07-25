@@ -91,8 +91,8 @@ userRouter.get(
     res.send("ok")
   }
 );
-userRouter.post("/api/dashboard",ensureAuthenticated,dashboard);
-// userRouter.post("/api/dashboard", dashboard);
+// userRouter.post("/api/dashboard",ensureAuthenticated,dashboard);
+userRouter.post("/api/dashboard", dashboard);
 // ensureAuthenticated
 // userRouter.post("/api/register",registerUser)
 
