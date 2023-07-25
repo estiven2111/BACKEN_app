@@ -88,7 +88,7 @@ userRouter.get(
   (req, res) => {
     console.log("callbackkkkk");
     // res.redirect("/user/api/dashboard");
-    res.send("ok")
+    res.json({pass:"ok",token:req.user.accessToken})
   }
 );
 // userRouter.post("/api/dashboard",ensureAuthenticated,dashboard);

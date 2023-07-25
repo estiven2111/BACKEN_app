@@ -39,7 +39,7 @@ const uploadFiles = async (req, res) => {
 
 const dashboard = async (req, res) => {
   console.log("entroooooooooooooooooooooooo");
-
+ const {token} = req.body
   if(req.files){
     const {imagen} = req.files
     console.log(imagen)
@@ -76,13 +76,13 @@ const dashboard = async (req, res) => {
         console.error(err);
         return;
       }
-     console.log("token usuario",req.user.accessToken)
+     console.log("token usuario",token)
       request.put(
         {
           url: `https://graph.microsoft.com/v1.0/drive/root:/${onedrive_folder}/${onedrive_filename}:/content`,
           headers: {
-            Authorization: "Bearer " + req.user.accessToken,
-            // Authorization: "Bearer " + TOKEN,
+            // Authorization: "Bearer " + req.user.accessToken,
+            Authorization: "Bearer " + token,
             "Content-Type": "application/json",
           },
           body: data,
